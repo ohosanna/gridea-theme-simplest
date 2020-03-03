@@ -1,0 +1,8 @@
+<nav id="pagination">
+  <% if (pagination.prev) { %>
+    <a href="<%= pagination.prev %>" class="prev"><i class="fa fa-chevron-left"></i> 上一页</a>
+  <% } %>
+  <% if (pagination.next) { %>
+    <a href="<%= pagination.next %>" class="next">下一页 <i class="fa fa-chevron-right"></i></a>
+  <% } %>
+  </nav>

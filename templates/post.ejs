@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('./_blocks/head', { siteTitle: `${post.title} | ${themeConfig.siteName}` }) %>
+    <meta name="description" content="<%- post.description %>" />
+    <meta name="keywords" content="<%- post.tags.map(tag => tag.name).join(',') %>" />
+  </head>
+  <body>
+
+      <%- include('./_blocks/header') %>
+
+      <div id="content">
+        <div class="center">
+          <div class="main-col">
+            <%- include('./_blocks/article', {index: false, item: post}) %>
+          </div>
+        </div>
+      </div>
+      <%- include('./_blocks/footer') %>
+    </div>
+
+    <%- include('./_blocks/scripts') %>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('./_blocks/head', { siteTitle: themeConfig.siteName }) %>
+    <meta name="description" content="<%= themeConfig.siteDescription %>">
+    <% if (site.customConfig.renderKaTeX) { %>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <% } %>
+  </head>
+  <body>
+    <div id="app" class="main">
+      <%- include('./_blocks/header') %>
+
+      <div id="content">
+        <div class="center">
+          <div class="main-col">
+            <% posts.forEach(function(post) { %>
+              <%- include('./_blocks/article', {index: true, item: post}) %>
+            <% }); %>
+            <%- include('./_blocks/pagination') %>
+          </div>
+        </div>
+      </div>
+      <%- include('./_blocks/pagination') %>
+      <%- include('./_blocks/footer') %>
+    </div>
+
+    <%- include('./_blocks/scripts') %>
+  </body>
+</html>
