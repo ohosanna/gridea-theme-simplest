@@ -18,22 +18,23 @@ article {
   header {
     .meta {
       line-height: 30px;
-
       overflow: hidden;
-
       height: 30px;
-
       text-align: center;
-
       color: #fff;
+      display: flex;
       .icon {
-        float: left;
+        display: inline-flex;
         overflow: hidden;
-
         width: 30px;
         height: 100%;
-
         background: #e75a30;
+        align-items: center;
+        justify-content: center;
+        .svg-icon {
+          width: 20px;
+          height: 20px;
+        }
       }
       time {
         font-family: @font-mono;
@@ -275,6 +276,17 @@ article {
       margin-top: 15px;
       iframe {
         margin-top: 0;
+      }
+    }
+    .tags {
+      display: flex;
+      .svg-icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+      }
+      a {
+        line-height: 24px;
       }
     }
   }
